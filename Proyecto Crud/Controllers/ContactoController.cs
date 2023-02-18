@@ -24,6 +24,7 @@ namespace Proyecto_Crud.Controllers
         // GET: Contacto
         public ActionResult Inicio()
         {
+            oLista = new List<Contacto>();
             using(SqlConnection oconexion = new SqlConnection(conexion))
             {
                 SqlCommand cmd = new SqlCommand("SELECT * FROM CONTACTO", oconexion);
