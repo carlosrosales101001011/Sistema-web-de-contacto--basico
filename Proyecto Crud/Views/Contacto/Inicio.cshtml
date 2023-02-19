@@ -5,7 +5,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Pagina de inicio hecha :)</h2>
 
 <div class="row" style="margin-top:30px">
     <div class="col-sm-12">
@@ -14,7 +13,7 @@
                 <h4>Lista de contacto</h4>
             </div>
             <div class="panel-body">
-                <a class="btn btn-success">Crear Nuevo</a>
+                <a class="btn btn-success" href="@Url.Action("Registrar", "Contacto")">Crear Nuevo</a>
                 <hr />
                 <div class="table table-responsive">
                     <table class="table table-striped">
@@ -35,7 +34,10 @@
                                     <td>@item.Apellidos</td>
                                     <td>@item.Telefono </td>
                                     <td>@item.Correo</td>
-                                    <td></td>
+                                    <td>
+                                        <a class="btn btn-primary btn-sm" href="@Url.Action("Editar", "Contacto", new {idContacto=item.IdContact})">Editar</a>
+                                        <a class="btn btn-danger btn-sm" href="@Url.Action("Eliminar", "Contacto", new {idContacto=item.IdContact})">Eliminar</a>
+                                    </td>
                                 </tr>
             }
                         </tbody>

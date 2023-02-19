@@ -164,6 +164,9 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Contacto\Inicio.cshtml" />
+    <Content Include="Views\Contacto\Registrar.cshtml" />
+    <Content Include="Views\Contacto\Editar.cshtml" />
+    <Content Include="Views\Contacto\ELiminar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

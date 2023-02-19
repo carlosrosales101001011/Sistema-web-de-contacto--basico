@@ -1,0 +1,29 @@
+﻿@model Proyecto_Crud.Models.Contacto
+
+@{
+    ViewBag.Title = "ELiminar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row" style="margin-top:30px">
+    <div class="col-sm-12">
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <h4>Eliminar Contacto</h4>
+            </div>
+            <div class="panel-body">
+                <div class="alert alert-danger">
+                    ¿Deseas eliminar el contacto, @Html.DisplayTextFor(m => m.Nombre) @Html.DisplayTextFor(m => m.Apellidos ) ? 
+                </div>
+                <form action="@Url.Action("Eliminar","Contacto")" method="post">
+
+                    <input type="hidden" class="form-control" name="IdContact" value="@Html.DisplayTextFor(m=>m.IdContact)" />
+                    <button type="submit" class="btn btn-warning">Eliminar</button>
+
+                    <a class="btn btn-warning" href="@Url.Action("Inicio", "Contacto")">Volver</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
